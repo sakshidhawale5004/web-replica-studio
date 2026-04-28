@@ -1,5 +1,6 @@
 import { Phone } from "lucide-react";
 import logo from "@/assets/msc-logo.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { label: "About", href: "#about" },
@@ -31,6 +32,7 @@ export const Navbar = () => (
         <a href="tel:+919967980747" className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent">
           <Phone className="w-4 h-4" /> +91 99679 80747
         </a>
+        <ThemeToggle />
         <a href="#contact" className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
           Get a Quote
         </a>
