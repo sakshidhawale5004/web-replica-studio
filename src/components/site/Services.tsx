@@ -15,17 +15,22 @@ const services = [
 ];
 
 export const Services = () => (
-  <section id="services" className="py-24 md:py-32 bg-secondary/50">
-    <div className="container-wide">
-      <SectionHead
-        eyebrow="What We Offer"
-        title={<>Complete interior solutions, <span className="text-italic-display text-accent">end to end.</span></>}
-        subtitle="From the floor beneath your feet to the wall behind your sofa — we specialize in everything that makes a space feel finished."
-      />
-      <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden">
-        {services.map(({ icon: Icon, t, d }) => (
-          <div key={t} className="bg-card p-8 hover:bg-background transition-colors group">
-            <Icon className="w-8 h-8 text-accent mb-5 group-hover:scale-110 transition-transform" strokeWidth={1.5} />
+  <section id="services" className="relative py-24 md:py-32 bg-secondary/50 overflow-hidden">
+    <div className="blob" style={{ width: 500, height: 500, top: "-10%", right: "-10%", background: "hsl(32 65% 52% / 0.4)" }} />
+    <div className="container-wide relative">
+      <div data-reveal>
+        <SectionHead
+          eyebrow="What We Offer"
+          title={<>Complete interior solutions, <span className="text-italic-display text-accent">end to end.</span></>}
+          subtitle="From the floor beneath your feet to the wall behind your sofa — we specialize in everything that makes a space feel finished."
+        />
+      </div>
+      <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden shadow-[var(--shadow-elegant)]">
+        {services.map(({ icon: Icon, t, d }, i) => (
+          <div key={t} data-reveal style={{ transitionDelay: `${i * 50}ms` }} className="bg-card p-8 hover:bg-background transition-all duration-500 group hover:-translate-y-1 relative">
+            <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-[var(--shadow-soft)]">
+              <Icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors" strokeWidth={1.5} />
+            </div>
             <h3 className="font-display text-xl font-semibold text-foreground mb-2">{t}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
           </div>

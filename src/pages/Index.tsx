@@ -10,8 +10,10 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { MessageCircle } from "lucide-react";
 import { useEffect } from "react";
+import { useReveal } from "@/hooks/use-reveal";
 
 const Index = () => {
+  useReveal();
   useEffect(() => {
     document.title = "Mahaveer Sales Corporation — Wooden Flooring & Interiors, Mumbai";
     const meta = document.querySelector('meta[name="description"]') || Object.assign(document.createElement('meta'), { name: 'description' });
