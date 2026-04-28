@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead";
 import { Quote } from "lucide-react";
+import { Tilt3D } from "./Tilt3D";
 
 const items = [
   { q: "The engineered wooden flooring transformed our living room completely. Installation was clean, on time, and the finish is stunning even after 3 years.", n: "Priya Sharma", r: "Homeowner, Bandra" },
@@ -8,24 +9,30 @@ const items = [
 ];
 
 export const Testimonials = () => (
-  <section className="py-24 md:py-32">
-    <div className="container-wide">
-      <SectionHead
-        eyebrow="Client Stories"
-        title={<>Trusted by homes & businesses <span className="text-italic-display text-accent">across India.</span></>}
-      />
+  <section className="relative py-24 md:py-32 overflow-hidden">
+    <div className="container-wide relative">
+      <div data-reveal>
+        <SectionHead
+          eyebrow="Client Stories"
+          title={<>Trusted by homes & businesses <span className="text-italic-display text-accent">across India.</span></>}
+        />
+      </div>
       <div className="mt-16 grid md:grid-cols-3 gap-6">
-        {items.map((it) => (
-          <figure key={it.n} className="bg-card border border-border rounded-2xl p-8 flex flex-col">
-            <Quote className="w-8 h-8 text-accent mb-5" strokeWidth={1.5} />
-            <blockquote className="font-display text-lg leading-relaxed text-foreground flex-1">
-              {it.q}
-            </blockquote>
-            <figcaption className="mt-6 pt-6 border-t border-border">
-              <p className="font-semibold text-foreground">{it.n}</p>
-              <p className="text-sm text-muted-foreground">{it.r}</p>
-            </figcaption>
-          </figure>
+        {items.map((it, i) => (
+          <div key={it.n} data-reveal style={{ transitionDelay: `${i * 100}ms` }}>
+            <Tilt3D max={6} className="rounded-2xl h-full">
+              <figure className="bg-card border border-border rounded-2xl p-8 flex flex-col card-3d h-full">
+                <Quote className="w-8 h-8 text-accent mb-5 tilt-pop" strokeWidth={1.5} />
+                <blockquote className="font-display text-lg leading-relaxed text-foreground flex-1 tilt-pop">
+                  {it.q}
+                </blockquote>
+                <figcaption className="mt-6 pt-6 border-t border-border tilt-pop">
+                  <p className="font-semibold text-foreground">{it.n}</p>
+                  <p className="text-sm text-muted-foreground">{it.r}</p>
+                </figcaption>
+              </figure>
+            </Tilt3D>
+          </div>
         ))}
       </div>
     </div>
