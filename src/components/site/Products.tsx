@@ -1,5 +1,6 @@
 import { SectionHead } from "./SectionHead";
 import { ArrowUpRight } from "lucide-react";
+import { Tilt3D } from "./Tilt3D";
 import wood from "@/assets/product-wood.jpg";
 import blinds from "@/assets/product-blinds.jpg";
 import wallpaper from "@/assets/product-wallpaper.jpg";
@@ -17,9 +18,9 @@ const products = [
 ];
 
 export const Products = () => (
-  <section id="products" className="py-24 md:py-32">
-    <div className="container-wide">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+  <section id="products" className="relative py-24 md:py-32 overflow-hidden bg-mesh">
+    <div className="container-wide relative">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16" data-reveal>
         <SectionHead
           eyebrow="Featured Range"
           title={<>Products that <span className="text-italic-display text-accent">elevate</span> every space.</>}
@@ -29,22 +30,27 @@ export const Products = () => (
         </a>
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((p) => (
-          <article key={p.t} className="group rounded-2xl overflow-hidden bg-card border border-border hover:shadow-[var(--shadow-elegant)] transition-all duration-500">
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <img src={p.img} alt={p.t} loading="lazy" width={1024} height={768} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <span className="absolute top-4 left-4 text-[10px] tracking-[0.2em] uppercase font-semibold bg-background/95 backdrop-blur px-3 py-1.5 rounded-full text-foreground">
-                {p.tag}
-              </span>
-            </div>
-            <div className="p-6">
-              <h3 className="font-display text-xl font-semibold mb-2">{p.t}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.d}</p>
-              <a href="#contact" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:gap-2.5 transition-all">
-                Enquire now <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-          </article>
+        {products.map((p, i) => (
+          <div key={p.t} data-reveal style={{ transitionDelay: `${i * 80}ms` }}>
+            <Tilt3D max={8} className="rounded-2xl">
+              <article className="group rounded-2xl overflow-hidden bg-card border border-border card-3d">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img src={p.img} alt={p.t} loading="lazy" width={1024} height={768} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1200ms]" />
+                  <span className="absolute top-4 left-4 text-[10px] tracking-[0.2em] uppercase font-semibold bg-background/95 backdrop-blur px-3 py-1.5 rounded-full text-foreground tilt-pop">
+                    {p.tag}
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+                <div className="p-6 tilt-pop">
+                  <h3 className="font-display text-xl font-semibold mb-2">{p.t}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{p.d}</p>
+                  <a href="#contact" className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:gap-2.5 transition-all">
+                    Enquire now <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </article>
+            </Tilt3D>
+          </div>
         ))}
       </div>
     </div>
