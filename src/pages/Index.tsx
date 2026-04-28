@@ -1,16 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Services } from "@/components/site/Services";
+import { Products } from "@/components/site/Products";
+import { WhyUs } from "@/components/site/WhyUs";
+import { Testimonials } from "@/components/site/Testimonials";
+import { Gallery } from "@/components/site/Gallery";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
+import { MessageCircle } from "lucide-react";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Mahaveer Sales Corporation — Wooden Flooring & Interiors, Mumbai";
+    const meta = document.querySelector('meta[name="description"]') || Object.assign(document.createElement('meta'), { name: 'description' });
+    meta.setAttribute('content', "Premium wooden flooring, blinds, wallpapers, decking and complete interior solutions in Mumbai. Trusted since 2006.");
+    if (!meta.parentNode) document.head.appendChild(meta);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <About />
+      <Services />
+      <Products />
+      <WhyUs />
+      <Testimonials />
+      <Gallery />
+      <Contact />
+      <Footer />
+
+      <a
+        href="https://api.whatsapp.com/send?phone=919967980747&text=Hi%2C%20MAHAVEER%20SALES%20CORPORATION"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-medium shadow-[var(--shadow-elegant)] hover:scale-105 transition-transform"
+      >
+        <MessageCircle className="w-5 h-5" /> Chat with us
+      </a>
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
