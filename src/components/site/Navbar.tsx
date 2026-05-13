@@ -1,5 +1,5 @@
 import { Phone } from "lucide-react";
-import logo from "@/assets/msc-logo.png";
+import logo from "@/assets/msc-logo.jpg";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
