@@ -15,7 +15,7 @@ const projects: Project[] = [
   {
     img: "/mahaver/exclusive engineering wooden flooring (2).jpg",
     title: "Exclusive Engineered Wooden Flooring",
-    shortDesc: "✨ Premium hardwood installation. Elegant & durable.",
+    shortDesc: "✨ Premium hardwood installation.",
     longDesc: "A stunning showcase of our engineered wooden flooring expertise. This project features genuine hardwood veneer with multi-ply engineered core, delivering both beauty and stability. Perfect for high-traffic residential and commercial spaces.",
     features: ["Genuine hardwood veneer", "Water & scratch resistant", "Professional installation", "10+ year warranty"],
   },
@@ -180,7 +180,7 @@ export const Projects = () => {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16" data-reveal>
           <SectionHead
             eyebrow="Our Portfolio"
-            title={<>Mahaveer Projects that <span className="text-italic-display text-accent">inspire.</span></>}
+            title={<>Mahaveer Sales Corporation Projects that <span className="text-italic-display text-accent">inspire.</span></>}
           />
           <a href="#contact" className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent group">
             View all projects <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
