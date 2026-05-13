@@ -1,5 +1,4 @@
 import { SectionHead } from "./SectionHead";
-import { Award, Users, Zap, TrendingUp } from "lucide-react";
 
 export const BusinessInfo = () => (
   <section id="business-info" className="py-24 md:py-32 bg-secondary/50">
@@ -32,23 +31,16 @@ export const BusinessInfo = () => (
           </div>
         </div>
 
-        {/* Key Stats */}
-        <div data-reveal className="space-y-6">
-          <div className="grid grid-cols-2 gap-4">
-            {[
-              { icon: Award, label: "Years of Excellence", value: "18+" },
-              { icon: Users, label: "Satisfied Clients", value: "1000+" },
-              { icon: TrendingUp, label: "Projects Completed", value: "500+" },
-              { icon: Zap, label: "Product Range", value: "20+" },
-            ].map(({ icon: Icon, label, value }) => (
-              <div key={label} className="bg-card border border-border rounded-xl p-4 hover:border-accent/40 transition-colors">
-                <div className="w-10 h-10 rounded-lg bg-accent/10 text-accent flex items-center justify-center mb-3">
-                  <Icon className="w-5 h-5" />
-                </div>
-                <p className="text-2xl font-semibold font-display">{value}</p>
-                <p className="text-xs text-muted-foreground mt-1">{label}</p>
-              </div>
-            ))}
+        {/* Our Commitment */}
+        <div data-reveal className="flex flex-col justify-center">
+          <div className="bg-card border border-border rounded-xl p-8 h-full flex flex-col justify-center">
+            <h3 className="font-display text-2xl font-semibold mb-6">Our Commitment</h3>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              Since 2006, Mahaveer Sales Corporation has been committed to delivering premium interior products and services with uncompromising quality.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              We believe in building lasting relationships with our clients through excellence, integrity, and exceptional service. Every project we undertake reflects our dedication to transforming spaces into beautiful, functional environments.
+            </p>
           </div>
         </div>
       </div>
