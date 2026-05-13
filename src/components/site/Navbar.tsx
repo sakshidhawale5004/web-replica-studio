@@ -15,11 +15,11 @@ const links = [
 export const Navbar = () => (
   <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
     <div className="container-wide flex items-center justify-between h-20">
-      <a href="#" className="flex items-center gap-3">
-        <img src={logo} alt="Mahaveer Sales Corporation logo" className="w-11 h-11 rounded-md object-cover" width={44} height={44} />
+      <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+        <img src={logo} alt="Mahaveer Sales Corporation logo" className="w-12 h-12 rounded-lg object-cover shadow-sm" width={48} height={48} loading="eager" />
         <div className="leading-tight hidden sm:block">
-          <p className="font-display text-base font-semibold">Mahaveer Sales</p>
-          <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground">Corporation · Est. 2006</p>
+          <p className="font-display text-sm font-semibold">Mahaveer Sales</p>
+          <p className="text-[9px] tracking-[0.15em] uppercase text-muted-foreground font-medium">Corporation · Est. 2006</p>
         </div>
       </a>
       <nav className="hidden lg:flex items-center gap-8">

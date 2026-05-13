@@ -50,13 +50,6 @@ export const BusinessInfo = () => (
               </div>
             ))}
           </div>
-
-          <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6">
-            <h3 className="font-display text-lg font-semibold mb-4">Our Commitment</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Since 2006, Mahaveer Sales Corporation has been committed to delivering premium interior products and services with uncompromising quality. We believe in building lasting relationships with our clients through excellence, integrity, and exceptional service.
-            </p>
-          </div>
         </div>
       </div>
     </div>
