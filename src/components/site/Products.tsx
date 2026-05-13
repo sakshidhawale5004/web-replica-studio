@@ -3,11 +3,16 @@ import { ArrowUpRight, MessageCircle, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Tilt3D } from "./Tilt3D";
 import wood from "@/assets/product-wood.jpg";
+import laminated from "@/assets/product-laminated.jpg";
+import vinyl from "@/assets/product-vinyl.jpg";
 import blinds from "@/assets/product-blinds.jpg";
 import wallpaper from "@/assets/product-wallpaper.jpg";
 import decking from "@/assets/product-decking.jpg";
 import grass from "@/assets/product-grass.jpg";
 import carpet from "@/assets/product-carpet.jpg";
+import g4 from "@/assets/gallery-4.jpg";
+import g5 from "@/assets/gallery-5.jpg";
+import g6 from "@/assets/gallery-6.jpg";
 
 type Product = {
   img: string;
@@ -62,10 +67,50 @@ const products: Product[] = [
   {
     img: carpet,
     tag: "Hospitality grade",
-    t: "Wall-to-Wall Carpets",
-    d: "Plush, anti-viral carpets for hotels, offices and luxury residences.",
-    long: "Premium wall-to-wall carpeting for hotels, offices, conference rooms and luxury homes. Stain-resistant, acoustically insulating and available in countless colours, textures and modular tile formats.",
-    features: ["Hospitality-grade quality", "Stain & soil resistant", "Acoustic insulation", "Tiles or broadloom"],
+    t: "Wall-to-Wall Carpets & Tiles",
+    d: "Plush, anti-viral carpets and modular carpet tiles for offices and hotels.",
+    long: "Premium wall-to-wall carpeting and modular carpet tiles for hotels, offices, conference rooms and luxury homes. Anti-viral, stain-resistant and acoustically insulating — available in countless colours and textures.",
+    features: ["Hospitality-grade quality", "Anti-viral & stain resistant", "Acoustic insulation", "Tiles or broadloom"],
+  },
+  {
+    img: laminated,
+    tag: "Natural look",
+    t: "Exclusive Laminated Flooring",
+    d: "A flawless replica of natural wood flooring at a smart price point.",
+    long: "Laminated flooring is a high-density replica of natural wood — engineered for durability and easy upkeep. Scratch-resistant, dimensionally stable and available in dozens of authentic wood and stone finishes.",
+    features: ["Replica of natural wood", "Scratch & stain resistant", "Easy click installation", "Wide finish library"],
+  },
+  {
+    img: vinyl,
+    tag: "Waterproof",
+    t: "SPC & PVC Vinyl Flooring",
+    d: "Waterproof, termite-proof inter-locking vinyl planks for any space.",
+    long: "SPC (Stone Plastic Composite) and PVC vinyl planks are 100% waterproof, termite-proof and incredibly long-wearing. Made from plasticised PVC with a faux wood-grain finish — ideal for homes, offices and high-traffic businesses.",
+    features: ["100% waterproof", "Termite & moisture proof", "Inter-lock click system", "Long-wearing durability"],
+  },
+  {
+    img: g4,
+    tag: "Outdoor",
+    t: "Green Vertical Garden",
+    d: "Living vertical gardens for walls, balconies and façades.",
+    long: "Vertical gardening is a special kind of urban gardening, perfect for small spaces. We design and install vertical green walls and patterned planters for homes, offices and commercial façades.",
+    features: ["Custom designs", "Indoor & outdoor", "Low-maintenance options", "Real or artificial"],
+  },
+  {
+    img: g5,
+    tag: "Safety",
+    t: "Invisible Grills",
+    d: "Advanced grill system for child & balcony safety without spoiling the view.",
+    long: "Invisible grilles are an advanced safety system — especially for children — that don't spoil your view. Tensioned stainless steel cables provide reliable fall protection on balconies, windows and high-rise openings.",
+    features: ["Stainless steel cables", "Child & pet safe", "Unobstructed view", "Weather resistant"],
+  },
+  {
+    img: g6,
+    tag: "Wet-area",
+    t: "PVC Wall & Foam Panels",
+    d: "Waterproof PVC and foam panels for leakage and seepage-affected walls.",
+    long: "PVC wall and ceiling panels are made of a waterproof material that is highly resistant to water — perfect for kitchens, bathrooms and seepage-affected walls. Foam panels add insulation and a clean, modern finish.",
+    features: ["100% waterproof joints", "Conceals damp walls", "Easy to clean", "Quick installation"],
   },
 ];
 
