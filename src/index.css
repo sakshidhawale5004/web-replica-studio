@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,ital@9..144,400;9..144,600;9..144,700;9..144,400..700;9..144,400..700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm cream + deep navy editorial palette */
+    --background: 38 36% 96%;
+    --foreground: 220 35% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 35% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 35% 12%;
+
+    --primary: 220 40% 14%;
+    --primary-foreground: 38 36% 96%;
+
+    --secondary: 35 25% 90%;
+    --secondary-foreground: 220 35% 12%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 220 12% 40%;
+
+    --accent: 32 65% 52%;
+    --accent-foreground: 0 0% 100%;
+
+    --gold: 36 70% 55%;
+    --gold-foreground: 220 40% 14%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 18% 86%;
+    --input: 35 18% 86%;
+    --ring: 220 40% 14%;
+
+    --radius: 0.75rem;
+
+    /* Gradients & shadows */
+    --gradient-hero: linear-gradient(180deg, hsl(220 40% 14% / 0.15) 0%, hsl(220 40% 14% / 0.55) 60%, hsl(220 40% 14% / 0.85) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(32 65% 52%), hsl(36 70% 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 40% 14%), hsl(220 35% 22%));
+    --gradient-mesh: radial-gradient(at 20% 10%, hsl(32 65% 52% / 0.18) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(36 70% 55% / 0.14) 0px, transparent 50%), radial-gradient(at 0% 80%, hsl(220 40% 14% / 0.10) 0px, transparent 50%);
+    --shadow-elegant: 0 30px 60px -30px hsl(220 40% 14% / 0.35);
+    --shadow-soft: 0 10px 30px -15px hsl(220 40% 14% / 0.25);
+    --shadow-3d: 0 1px 0 hsl(0 0% 100% / 0.6) inset, 0 -1px 0 hsl(220 40% 14% / 0.06) inset, 0 20px 40px -20px hsl(220 40% 14% / 0.35), 0 8px 16px -8px hsl(32 65% 52% / 0.18);
+    --shadow-glow: 0 0 60px hsl(32 65% 52% / 0.35);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Deep navy night palette */
+    --background: 220 35% 7%;
+    --foreground: 38 30% 92%;
+
+    --card: 220 30% 11%;
+    --card-foreground: 38 30% 92%;
+
+    --popover: 220 30% 11%;
+    --popover-foreground: 38 30% 92%;
+
+    --primary: 38 30% 92%;
+    --primary-foreground: 220 35% 7%;
+
+    --secondary: 220 25% 14%;
+    --secondary-foreground: 38 30% 92%;
+
+    --muted: 220 22% 16%;
+    --muted-foreground: 35 12% 65%;
+
+    --accent: 36 75% 60%;
+    --accent-foreground: 220 35% 7%;
+
+    --gold: 36 80% 65%;
+    --gold-foreground: 220 35% 7%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 36 75% 60%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(220 35% 7% / 0.25) 0%, hsl(220 35% 7% / 0.65) 60%, hsl(220 35% 7% / 0.92) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(36 75% 55%), hsl(32 65% 48%));
+    --gradient-dark: linear-gradient(135deg, hsl(220 35% 9%), hsl(220 30% 16%));
+    --gradient-mesh: radial-gradient(at 20% 10%, hsl(36 75% 60% / 0.18) 0px, transparent 50%), radial-gradient(at 80% 0%, hsl(220 50% 30% / 0.30) 0px, transparent 50%), radial-gradient(at 0% 80%, hsl(36 75% 60% / 0.10) 0px, transparent 50%);
+    --shadow-elegant: 0 30px 60px -30px hsl(0 0% 0% / 0.6);
+    --shadow-soft: 0 10px 30px -15px hsl(0 0% 0% / 0.5);
+    --shadow-3d: 0 1px 0 hsl(0 0% 100% / 0.05) inset, 0 -1px 0 hsl(0 0% 0% / 0.4) inset, 0 20px 40px -20px hsl(0 0% 0% / 0.6), 0 8px 16px -8px hsl(36 75% 60% / 0.15);
+    --shadow-glow: 0 0 60px hsl(36 75% 60% / 0.35);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-italic-display {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .container-wide {
+    @apply max-w-7xl mx-auto px-6 md:px-10;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-muted-foreground font-medium;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply w-8 h-px bg-accent;
+  }
+
+  /* Scroll reveal */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px) scale(0.985);
+    transition: opacity 900ms var(--transition-smooth), transform 900ms var(--transition-smooth);
+    will-change: opacity, transform;
+  }
+  [data-reveal].is-revealed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* 3D card lift */
+  .card-3d {
+    box-shadow: var(--shadow-3d);
+    transition: transform 600ms var(--transition-smooth), box-shadow 600ms var(--transition-smooth);
+  }
+  .card-3d:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -25px hsl(220 40% 14% / 0.45), 0 12px 24px -12px hsl(32 65% 52% / 0.25);
+  }
+
+  /* Animated mesh / blob backgrounds */
+  .bg-mesh { background-image: var(--gradient-mesh); }
+
+  .blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.55;
+    pointer-events: none;
+    animation: float-blob 14s ease-in-out infinite;
+  }
+
+  @keyframes float-blob {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -40px) scale(1.08); }
+    66% { transform: translate(-20px, 30px) scale(0.96); }
+  }
+
+  @keyframes shimmer-text {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  .shimmer {
+    background: linear-gradient(90deg, hsl(36 70% 65%), hsl(32 65% 52%), hsl(36 70% 75%), hsl(32 65% 52%));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer-text 6s ease-in-out infinite;
+  }
+
+  /* Tilt children layer (pop forward) */
+  .tilt-pop { transform: translateZ(40px); }
+}
