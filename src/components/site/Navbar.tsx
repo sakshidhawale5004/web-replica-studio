@@ -1,5 +1,4 @@
 import { Phone } from "lucide-react";
-import logo from "@/assets/msc-logo.jpg";
 import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
@@ -16,9 +15,7 @@ export const Navbar = () => (
   <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
     <div className="container-wide flex items-center justify-between h-20">
       <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-sm border border-slate-700">
-          <span className="font-display text-lg font-bold text-white">msc</span>
-        </div>
+        <img src="/logo/msc-creative-logo.svg" alt="MSC Creative logo" className="w-14 h-10 object-contain" width={56} height={40} loading="eager" />
         <div className="leading-tight hidden sm:block">
           <p className="font-display text-sm font-semibold">Mahaveer Sales</p>
           <p className="text-[9px] tracking-[0.15em] uppercase text-muted-foreground font-medium">Corporation · Est. 2006</p>

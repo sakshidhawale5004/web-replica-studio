@@ -1,0 +1,10 @@
+<svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Oval background -->
+  <ellipse cx="200" cy="120" rx="180" ry="110" fill="#2c3e50" stroke="none"/>
+  
+  <!-- MSC text -->
+  <text x="200" y="100" font-family="Arial, sans-serif" font-size="80" font-weight="300" fill="none" stroke="white" stroke-width="3" text-anchor="middle" letter-spacing="8">msc</text>
+  
+  <!-- CREATIVE text -->
+  <text x="200" y="160" font-family="Georgia, serif" font-size="28" font-weight="400" fill="#a8b8c8" text-anchor="middle" letter-spacing="4">CREATIVE</text>
+</svg>
