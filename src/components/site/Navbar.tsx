@@ -16,7 +16,9 @@ export const Navbar = () => (
   <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
     <div className="container-wide flex items-center justify-between h-20">
       <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-        <img src={logo} alt="Mahaveer Sales Corporation logo" className="w-12 h-12 rounded-lg object-cover shadow-sm" width={48} height={48} loading="eager" />
+        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center shadow-sm border border-slate-700">
+          <span className="font-display text-lg font-bold text-white">msc</span>
+        </div>
         <div className="leading-tight hidden sm:block">
           <p className="font-display text-sm font-semibold">Mahaveer Sales</p>
           <p className="text-[9px] tracking-[0.15em] uppercase text-muted-foreground font-medium">Corporation · Est. 2006</p>
