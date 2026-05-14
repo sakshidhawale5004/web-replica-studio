@@ -1,14 +1,12 @@
-import logo from "@/assets/msc-logo.jpg";
-
 export const Footer = () => (
   <footer className="bg-[hsl(220_40%_10%)] text-white">
     <div className="container-wide py-16 grid md:grid-cols-3 gap-10">
       <div>
         <div className="flex items-center gap-3 mb-4">
-          <img src={logo} alt="Mahaveer Sales Corporation" className="w-12 h-12 rounded-md" width={48} height={48} />
+          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative logo" className="w-14 h-10 object-contain" width={56} height={40} loading="eager" />
           <div>
-            <p className="font-display text-lg font-semibold">Mahaveer Sales Corporation</p>
-            <p className="text-xs tracking-[0.2em] uppercase text-white/60">Est. 2006 · Mumbai</p>
+            <p className="font-display text-lg font-semibold">Mahaveer Sales</p>
+            <p className="text-xs tracking-[0.2em] uppercase text-white/60">Corporation · Est. 2006</p>
           </div>
         </div>
         <p className="text-sm text-white/70 leading-relaxed max-w-sm">
@@ -17,15 +15,21 @@ export const Footer = () => (
         <p className="text-xs text-white/50 mt-4">Devesh Gupta · Proprietor</p>
       </div>
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-white/60 mb-4">Explore</p>
+        <div className="flex items-center gap-2 mb-4">
+          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
+          <p className="text-xs uppercase tracking-[0.2em] text-white/60">Explore</p>
+        </div>
         <ul className="space-y-2 text-sm">
-          {["About", "Services", "Products", "Why Us", "Gallery", "Contact"].map((l) => (
+          {["About", "Services", "Projects", "Our Values", "Why Us", "Gallery", "Contact"].map((l) => (
             <li key={l}><a href={`#${l.toLowerCase().replace(" ", "")}`} className="text-white/85 hover:text-accent transition">{l}</a></li>
           ))}
         </ul>
       </div>
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-white/60 mb-4">Get in touch</p>
+        <div className="flex items-center gap-2 mb-4">
+          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
+          <p className="text-xs uppercase tracking-[0.2em] text-white/60">Get in touch</p>
+        </div>
         <ul className="space-y-2 text-sm text-white/85">
           <li>5/A Silver Apartment, 1st Akurli Cross Road, Kandivali East, Mumbai 400101</li>
           <li><a href="tel:+919967980747" className="hover:text-accent">+91 99679 80747</a> · <a href="tel:+919987112822" className="hover:text-accent">+91 99871 12822</a></li>
@@ -34,8 +38,11 @@ export const Footer = () => (
       </div>
     </div>
     <div className="border-t border-white/10">
-      <div className="container-wide py-6 text-xs text-white/60 flex flex-col md:flex-row justify-between gap-2">
-        <p>© {new Date().getFullYear()} Mahaveer Sales Corporation. All rights reserved.</p>
+      <div className="container-wide py-6 text-xs text-white/60 flex flex-col md:flex-row justify-between items-center gap-2">
+        <div className="flex items-center gap-2">
+          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative" className="w-6 h-4 object-contain" width={24} height={16} />
+          <p>© {new Date().getFullYear()} Mahaveer Sales Corporation. All rights reserved.</p>
+        </div>
         <p>Crafted with care in Mumbai.</p>
       </div>
     </div>
