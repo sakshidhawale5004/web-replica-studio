@@ -182,14 +182,9 @@ export const Projects = () => {
             eyebrow="Our Portfolio"
             title={<>Mahaveer Sales Corporation Projects that <span className="text-italic-display text-accent">inspire.</span></>}
           />
-          <div className="flex flex-wrap gap-3">
-            <a href="#contact" className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent group">
-              Explore All Projects <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-            <a href="#contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
-              Contact Us
-            </a>
-          </div>
+          <a href="#contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
+            Contact Us
+          </a>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => (
