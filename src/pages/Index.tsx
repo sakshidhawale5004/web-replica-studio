@@ -41,9 +41,11 @@ const Index = () => {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat with us on WhatsApp"
-        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-medium shadow-[var(--shadow-elegant)] hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 px-4 py-2.5 md:px-5 md:py-3 rounded-full bg-[#25D366] text-white font-medium text-sm md:text-base shadow-[var(--shadow-elegant)] hover:scale-105 transition-transform"
       >
-        <MessageCircle className="w-5 h-5" /> Chat with us
+        <MessageCircle className="w-4 h-4 md:w-5 md:h-5" />
+        <span className="hidden sm:inline">Chat with us</span>
+        <span className="sm:hidden">Chat</span>
       </a>
     </main>
   );
