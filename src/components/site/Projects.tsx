@@ -2,6 +2,11 @@ import { SectionHead } from "./SectionHead";
 import { ArrowUpRight, MessageCircle, Phone, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Tilt3D } from "./Tilt3D";
+import projectGlassFilms from "@/assets/project-glass-films.jpg";
+import projectArtificialGrass from "@/assets/project-artificial-grass.jpg";
+import projectOutdoorDeckings from "@/assets/project-outdoor-deckings.jpg";
+import projectFoamPanels from "@/assets/project-foam-panels.jpg";
+import projectWallpapers from "@/assets/project-wallpapers.jpg";
 
 type Project = {
   img: string;
@@ -69,11 +74,11 @@ const projects: Project[] = [
     features: ["Modular functionality", "Commercial-grade", "Easy replacement", "Professional appearance"],
   },
   {
-    img: "/mahaver/importedwallpaper.jpg",
+    img: projectWallpapers,
     title: "Imported Wallpapers",
     shortDesc: "Designer patterns. Global aesthetics.",
-    longDesc: "Curated imported wallpaper installation featuring designer patterns from across the globe. Washable, fade-resistant and installed by our expert team for a flawless finish. Perfect for homes, offices, and hotels.",
-    features: ["Imported designer rolls", "Washable & fade-resistant", "Custom murals available", "Expert installation"],
+    longDesc: "Curated imported wallpaper installation featuring elegant designer patterns and artistic designs. Washable, fade-resistant, and installed by our expert team for a flawless finish. Perfect for creating stunning feature walls in homes, offices, and hotels.",
+    features: ["Imported designer rolls", "Washable & fade-resistant", "Custom murals available", "Expert installation", "Premium quality"],
   },
   {
     img: "/mahaver/customizewallpaper.jpg",
@@ -83,7 +88,7 @@ const projects: Project[] = [
     features: ["Custom photo printing", "High-quality materials", "Easy installation", "Personalized design"],
   },
   {
-    img: "/mahaver/glassfilms.jpg",
+    img: projectGlassFilms,
     title: "Glass Films",
     shortDesc: "Protective coating. Privacy & style.",
     longDesc: "Glass films installation providing a thin laminate film for interior and exterior glass surfaces. Perfect for automobiles, boats, and buildings. Offers privacy, protection, and aesthetic enhancement.",
@@ -97,14 +102,14 @@ const projects: Project[] = [
     features: ["Custom designs", "Indoor & outdoor", "Low-maintenance options", "Real or artificial"],
   },
   {
-    img: "/mahaver/artificalglass.jpg",
+    img: projectArtificialGrass,
     title: "Artificial Grass",
     shortDesc: "Forever green. Zero maintenance.",
     longDesc: "Artificial grass installation showcasing lush, evergreen turf engineered for Indian weather. Soft underfoot, UV-stable, and child & pet friendly. Perfect for terraces, balconies, and gardens.",
     features: ["UV-stable colour", "Soft & realistic feel", "Child & pet safe", "Zero maintenance"],
   },
   {
-    img: "/mahaver/outdoordesking.jpg",
+    img: projectOutdoorDeckings,
     title: "Exclusive Outdoor Deckings",
     shortDesc: "Hardwood decking. Weatherproof.",
     longDesc: "Exclusive hardwood deckings installation featuring seasoned imported hardwood with waterproof properties. Easy to install with deck tile options also available. Perfect for outdoor entertaining spaces.",
@@ -125,7 +130,7 @@ const projects: Project[] = [
     features: ["100% waterproof joints", "Conceals damp walls", "Easy to clean", "Quick installation"],
   },
   {
-    img: "/mahaver/foampanels.jpg",
+    img: projectFoamPanels,
     title: "Foam Panels For Seepage Affected Walls",
     shortDesc: "Insulation & protection. Damp-proof.",
     longDesc: "Foam panels installation for seepage-affected walls. These panels are absolutely water-proof and made of PVC with water-resistant joints. Perfect for wet and damp areas like kitchens and bathrooms.",
@@ -156,7 +161,7 @@ const projects: Project[] = [
 
 const buildWaLink = (projectName: string) => {
   const text = encodeURIComponent(`Hi MAHAVEER SALES CORPORATION,\n\nI'm interested in your ${projectName} project.\nPlease share more details and pricing.`);
-  return `https://api.whatsapp.com/send?phone=919987112822&text=${text}`;
+  return `https://api.whatsapp.com/send?phone=919967980747&text=${text}`;
 };
 
 export const Projects = () => {
@@ -271,7 +276,7 @@ export const Projects = () => {
                   <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
                 </a>
                 <a
-                  href="tel:+919987112822"
+                  href="tel:+919967980747"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-foreground font-medium hover:bg-secondary transition"
                 >
                   <Phone className="w-4 h-4" /> Call us
