@@ -51,14 +51,9 @@ export const Hero = () => {
             <a href="https://api.whatsapp.com/send?phone=919967980747&text=Hi%2C%20MAHAVEER%20SALES%20CORPORATION" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] text-white font-medium hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300">
               <MessageCircle className="w-4 h-4" /> WhatsApp
             </a>
-            <div className="flex flex-col gap-1">
-              <a href="tel:+919967980747" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-300">
-                <Phone className="w-4 h-4" /> +91 99679 80747
-              </a>
-              <a href="tel:+917039257036" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-300 text-sm">
-                <Phone className="w-4 h-4" /> 70392 57036
-              </a>
-            </div>
+            <a href="tel:+919967980747" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-300">
+              <Phone className="w-4 h-4" /> +91 99679 80747
+            </a>
           </div>
 
           <div className="mt-16 grid grid-cols-3 gap-6 max-w-xl border-t border-white/20 pt-8">
