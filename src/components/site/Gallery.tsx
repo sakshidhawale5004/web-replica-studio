@@ -3,7 +3,6 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import g1 from "@/assets/gallery-1.jpg";
 import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
 import g6 from "@/assets/gallery-6.jpg";
 import productWood from "@/assets/product-wood.jpg";
@@ -27,7 +26,6 @@ const galleryItems: GalleryItem[] = [
   // Featured Projects
   { src: g1, alt: "Modern living room with SPC marble-effect flooring", span: "md:col-span-2 md:row-span-2" },
   { src: g3, alt: "Contemporary interior with PVC wood wall panels", span: "" },
-  { src: g4, alt: "Lush green vertical garden installation", span: "md:col-span-2" },
   { src: g5, alt: "Outdoor WPC deck flooring with pergola", span: "" },
   { src: g6, alt: "Invisible safety grill on high-rise balcony", span: "" },
   
