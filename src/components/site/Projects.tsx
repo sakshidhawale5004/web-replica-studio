@@ -152,6 +152,41 @@ const projects: Project[] = [
     longDesc: "Bird netting installation used to prevent birds from nesting or entering certain areas. Often used on buildings and gardens to protect against pest birds like pigeons, gulls, and sparrows.",
     features: ["Bird prevention", "Building protection", "Garden safe", "Durable netting"],
   },
+  {
+    img: "/mahaver/glassfilms.jpg",
+    title: "Glass Films",
+    shortDesc: "Protective coating. Privacy & style.",
+    longDesc: "Professional glass films installation providing thin laminate film for interior and exterior glass surfaces. Offers privacy protection, UV filtering, and aesthetic enhancement for offices, homes, and commercial buildings.",
+    features: ["Thin laminate film", "Interior & exterior use", "Privacy protection", "UV filtering", "Professional finish"],
+  },
+  {
+    img: "/mahaver/artificalglass.jpg",
+    title: "Artificial Grass",
+    shortDesc: "Forever green. Zero maintenance.",
+    longDesc: "Premium artificial grass installation for outdoor spaces. Lush, evergreen turf engineered for Indian weather with UV-stable color and realistic feel. Perfect for terraces, balconies, gardens, and play areas. Child and pet friendly with zero maintenance.",
+    features: ["UV-stable colour", "Soft & realistic feel", "Child & pet safe", "Zero maintenance", "Weather resistant"],
+  },
+  {
+    img: "/mahaver/outdoordesking.jpg",
+    title: "Exclusive Outdoor Deckings",
+    shortDesc: "Hardwood decking. Weatherproof.",
+    longDesc: "Premium outdoor decking installation featuring seasoned imported hardwood with waterproof properties. Modern lighting design with comfortable seating areas. Perfect for entertaining spaces, patios, and garden areas with professional finishing.",
+    features: ["Imported hardwood", "Waterproof properties", "Modern lighting", "Easy installation", "Professional finish"],
+  },
+  {
+    img: "/mahaver/foampanels.jpg",
+    title: "Foam Panels For Seepage Affected Walls",
+    shortDesc: "Insulation & protection. Damp-proof.",
+    longDesc: "Foam panels installation for seepage-affected walls providing complete waterproofing solution. Made of PVC with water-resistant joints, these panels are absolutely water-proof. Perfect for kitchens, bathrooms, and problem areas with damp issues.",
+    features: ["Water-proof material", "PVC construction", "Water-resistant joints", "Damp area suitable", "Easy to clean"],
+  },
+  {
+    img: "/mahaver/customizewallpaper.jpg",
+    title: "Imported Wallpapers",
+    shortDesc: "Designer patterns. Global aesthetics.",
+    longDesc: "Curated imported wallpaper installation featuring elegant designer patterns and artistic designs. Washable, fade-resistant, and installed by our expert team for a flawless finish. Perfect for creating stunning feature walls in homes, offices, and hotels.",
+    features: ["Imported designer rolls", "Washable & fade-resistant", "Custom murals available", "Expert installation", "Premium quality"],
+  },
 ];
 
 const buildWaLink = (projectName: string) => {
