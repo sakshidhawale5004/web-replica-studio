@@ -3,7 +3,7 @@ export const Footer = () => (
     <div className="container-wide py-16 grid md:grid-cols-3 gap-10">
       <div>
         <div className="flex items-center gap-3 mb-4">
-          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative logo" className="w-14 h-10 object-contain" width={56} height={40} loading="eager" />
+          <img src="/msc-logo.jpg" alt="MSC Creative logo" className="w-14 h-10 object-contain" width={56} height={40} loading="eager" />
           <div>
             <p className="font-display text-lg font-semibold">Mahaveer Sales</p>
             <p className="text-xs tracking-[0.2em] uppercase text-white/60">Corporation · Est. 2006</p>
@@ -16,7 +16,7 @@ export const Footer = () => (
       </div>
       <div>
         <div className="flex items-center gap-2 mb-4">
-          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
+          <img src="/msc-logo.jpg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
           <p className="text-xs uppercase tracking-[0.2em] text-white/60">Explore</p>
         </div>
         <ul className="space-y-2 text-sm">
@@ -27,7 +27,7 @@ export const Footer = () => (
       </div>
       <div>
         <div className="flex items-center gap-2 mb-4">
-          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
+          <img src="/msc-logo.jpg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
           <p className="text-xs uppercase tracking-[0.2em] text-white/60">Get in touch</p>
         </div>
         <ul className="space-y-2 text-sm text-white/85">
@@ -41,7 +41,7 @@ export const Footer = () => (
     <div className="border-t border-white/10">
       <div className="container-wide py-6 text-xs text-white/60 flex flex-col md:flex-row justify-between items-center gap-2">
         <div className="flex items-center gap-2">
-          <img src="/logo/msc-creative-logo.svg" alt="MSC Creative" className="w-6 h-4 object-contain" width={24} height={16} />
+          <img src="/msc-logo.jpg" alt="MSC Creative" className="w-6 h-4 object-contain" width={24} height={16} />
           <p>© {new Date().getFullYear()} Mahaveer Sales Corporation. All rights reserved.</p>
         </div>
         <p>Crafted with care in Mumbai.</p>
