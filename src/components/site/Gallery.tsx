@@ -2,7 +2,6 @@ import { SectionHead } from "./SectionHead";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import g5 from "@/assets/gallery-5.jpg";
@@ -14,7 +13,6 @@ import productCarpet from "@/assets/product-carpet.jpg";
 import productLaminated from "@/assets/product-laminated.jpg";
 import productVinyl from "@/assets/product-vinyl.jpg";
 import projectGrass from "@/assets/project-artificial-grass.jpg";
-import projectFoam from "@/assets/project-foam-panels.jpg";
 import projectGlass from "@/assets/project-glass-films.jpg";
 import projectDecking from "@/assets/project-outdoor-deckings.jpg";
 import projectWallpapers from "@/assets/project-wallpapers.jpg";
@@ -28,26 +26,24 @@ type GalleryItem = {
 const galleryItems: GalleryItem[] = [
   // Featured Projects
   { src: g1, alt: "Modern living room with SPC marble-effect flooring", span: "md:col-span-2 md:row-span-2" },
-  { src: g2, alt: "Office with patterned carpet tiles", span: "" },
-  { src: g3, alt: "Living room with PVC wood wall panels", span: "" },
-  { src: g4, alt: "Green vertical garden installation", span: "md:col-span-2" },
-  { src: g5, alt: "WPC deck flooring with pergola", span: "" },
-  { src: g6, alt: "Invisible grill on a high-rise balcony", span: "" },
+  { src: g3, alt: "Contemporary interior with PVC wood wall panels", span: "" },
+  { src: g4, alt: "Lush green vertical garden installation", span: "md:col-span-2" },
+  { src: g5, alt: "Outdoor WPC deck flooring with pergola", span: "" },
+  { src: g6, alt: "Invisible safety grill on high-rise balcony", span: "" },
   
   // Product Showcase
-  { src: productWood, alt: "Engineered wooden flooring", span: "" },
-  { src: productBlinds, alt: "Premium roller blinds collection", span: "" },
+  { src: productWood, alt: "Premium engineered wooden flooring", span: "" },
+  { src: productBlinds, alt: "Custom-fit roller blinds collection", span: "" },
   { src: productWallpaper, alt: "Imported designer wallpapers", span: "md:col-span-2" },
-  { src: productCarpet, alt: "Premium carpet tiles", span: "" },
-  { src: productLaminated, alt: "Laminated flooring options", span: "" },
+  { src: productCarpet, alt: "High-quality carpet tiles", span: "" },
+  { src: productLaminated, alt: "Durable laminated flooring", span: "" },
   { src: productVinyl, alt: "Vinyl flooring solutions", span: "" },
   
   // Project Installations
-  { src: projectGrass, alt: "Artificial grass vertical garden", span: "" },
-  { src: projectFoam, alt: "Acoustic foam panel installation", span: "" },
-  { src: projectGlass, alt: "Glass film application", span: "md:col-span-2" },
-  { src: projectDecking, alt: "Outdoor decking installation", span: "" },
-  { src: projectWallpapers, alt: "Wallpaper installation project", span: "" },
+  { src: projectGrass, alt: "Artificial grass vertical garden installation", span: "" },
+  { src: projectGlass, alt: "Professional glass film application", span: "md:col-span-2" },
+  { src: projectDecking, alt: "Outdoor WPC decking installation", span: "" },
+  { src: projectWallpapers, alt: "Premium wallpaper installation", span: "" },
 ];
 
 export const Gallery = () => {
