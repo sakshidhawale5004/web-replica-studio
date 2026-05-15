@@ -39,8 +39,8 @@ const galleryItems: GalleryItem[] = [
   
   // Project Installations
   { src: projectGrass, alt: "Artificial grass vertical garden installation", span: "" },
-  { src: projectGlass, alt: "Professional glass film application", span: "md:col-span-2" },
   { src: projectDecking, alt: "Outdoor WPC decking installation", span: "" },
+  { src: projectGlass, alt: "Professional glass film application", span: "md:col-span-2" },
 ];
 
 export const Gallery = () => {
