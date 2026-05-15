@@ -72,7 +72,7 @@ export const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[180px] md:auto-rows-[220px]">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 auto-rows-[180px] md:auto-rows-[220px]">
           {galleryItems.map((item, i) => (
             <div
               key={i}
