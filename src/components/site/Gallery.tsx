@@ -22,52 +22,44 @@ import projectWallpapers from "@/assets/project-wallpapers.jpg";
 type GalleryItem = {
   src: string;
   alt: string;
-  category: string;
   span?: string;
 };
 
 const galleryItems: GalleryItem[] = [
   // Featured Projects
-  { src: g1, alt: "Modern living room with SPC marble-effect flooring", category: "Flooring", span: "md:col-span-2 md:row-span-2" },
-  { src: g2, alt: "Office with patterned carpet tiles", category: "Carpets", span: "" },
-  { src: g3, alt: "Living room with PVC wood wall panels", category: "Wall Panels", span: "" },
-  { src: g4, alt: "Green vertical garden installation", category: "Landscaping", span: "md:col-span-2" },
-  { src: g5, alt: "WPC deck flooring with pergola", category: "Decking", span: "" },
-  { src: g6, alt: "Invisible grill on a high-rise balcony", category: "Safety", span: "" },
+  { src: g1, alt: "Modern living room with SPC marble-effect flooring", span: "md:col-span-2 md:row-span-2" },
+  { src: g2, alt: "Office with patterned carpet tiles", span: "" },
+  { src: g3, alt: "Living room with PVC wood wall panels", span: "" },
+  { src: g4, alt: "Green vertical garden installation", span: "md:col-span-2" },
+  { src: g5, alt: "WPC deck flooring with pergola", span: "" },
+  { src: g6, alt: "Invisible grill on a high-rise balcony", span: "" },
   
   // Product Showcase
-  { src: productWood, alt: "Engineered wooden flooring", category: "Flooring", span: "" },
-  { src: productBlinds, alt: "Premium roller blinds collection", category: "Blinds", span: "" },
-  { src: productWallpaper, alt: "Imported designer wallpapers", category: "Wallpapers", span: "md:col-span-2" },
-  { src: productCarpet, alt: "Premium carpet tiles", category: "Carpets", span: "" },
-  { src: productLaminated, alt: "Laminated flooring options", category: "Flooring", span: "" },
-  { src: productVinyl, alt: "Vinyl flooring solutions", category: "Flooring", span: "" },
+  { src: productWood, alt: "Engineered wooden flooring", span: "" },
+  { src: productBlinds, alt: "Premium roller blinds collection", span: "" },
+  { src: productWallpaper, alt: "Imported designer wallpapers", span: "md:col-span-2" },
+  { src: productCarpet, alt: "Premium carpet tiles", span: "" },
+  { src: productLaminated, alt: "Laminated flooring options", span: "" },
+  { src: productVinyl, alt: "Vinyl flooring solutions", span: "" },
   
   // Project Installations
-  { src: projectGrass, alt: "Artificial grass vertical garden", category: "Landscaping", span: "" },
-  { src: projectFoam, alt: "Acoustic foam panel installation", category: "Acoustics", span: "" },
-  { src: projectGlass, alt: "Glass film application", category: "Glass Films", span: "md:col-span-2" },
-  { src: projectDecking, alt: "Outdoor decking installation", category: "Decking", span: "" },
-  { src: projectWallpapers, alt: "Wallpaper installation project", category: "Wallpapers", span: "" },
+  { src: projectGrass, alt: "Artificial grass vertical garden", span: "" },
+  { src: projectFoam, alt: "Acoustic foam panel installation", span: "" },
+  { src: projectGlass, alt: "Glass film application", span: "md:col-span-2" },
+  { src: projectDecking, alt: "Outdoor decking installation", span: "" },
+  { src: projectWallpapers, alt: "Wallpaper installation project", span: "" },
 ];
-
-const categories = ["All", "Flooring", "Carpets", "Blinds", "Wallpapers", "Decking", "Landscaping", "Wall Panels", "Safety", "Acoustics", "Glass Films"];
 
 export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const filteredItems = selectedCategory === "All" 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === selectedCategory);
-
   const handlePrevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
+    setCurrentImageIndex((prev) => (prev - 1 + galleryItems.length) % galleryItems.length);
   };
 
   const handleNextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % filteredItems.length);
+    setCurrentImageIndex((prev) => (prev + 1) % galleryItems.length);
   };
 
   const handleImageClick = (src: string, index: number) => {
@@ -86,29 +78,9 @@ export const Gallery = () => {
           />
         </div>
 
-        {/* Category Filter */}
-        <div data-reveal className="mt-12 flex flex-wrap gap-2 md:gap-3 justify-center">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setSelectedCategory(cat);
-                setCurrentImageIndex(0);
-              }}
-              className={`px-4 md:px-6 py-2 md:py-2.5 rounded-full text-sm md:text-base font-medium transition-all duration-300 ${
-                selectedCategory === cat
-                  ? "bg-accent text-accent-foreground shadow-lg scale-105"
-                  : "bg-secondary text-foreground hover:bg-secondary/80 border border-border"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         {/* Gallery Grid */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[180px] md:auto-rows-[220px]">
-          {filteredItems.map((item, i) => (
+          {galleryItems.map((item, i) => (
             <div
               key={i}
               data-reveal
@@ -126,11 +98,6 @@ export const Gallery = () => {
               {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
-              {/* Category Badge */}
-              <div className="absolute top-3 right-3 bg-accent/90 backdrop-blur-sm text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {item.category}
-              </div>
-              
               {/* Text Content */}
               <div className="absolute bottom-0 left-0 right-0 p-3 md:p-4 text-primary-foreground opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                 <p className="text-xs md:text-sm font-semibold line-clamp-2">{item.alt}</p>
@@ -138,13 +105,6 @@ export const Gallery = () => {
             </div>
           ))}
         </div>
-
-        {/* Empty State */}
-        {filteredItems.length === 0 && (
-          <div className="mt-16 text-center py-12">
-            <p className="text-muted-foreground text-lg">No projects found in this category.</p>
-          </div>
-        )}
       </div>
 
       {/* Enhanced Lightbox Modal */}
@@ -198,13 +158,12 @@ export const Gallery = () => {
 
             {/* Image Counter */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
-              {currentImageIndex + 1} / {filteredItems.length}
+              {currentImageIndex + 1} / {galleryItems.length}
             </div>
 
             {/* Image Info */}
             <div className="mt-6 text-center text-white">
-              <p className="text-lg font-semibold">{filteredItems[currentImageIndex]?.alt}</p>
-              <p className="text-accent text-sm mt-1">{filteredItems[currentImageIndex]?.category}</p>
+              <p className="text-lg font-semibold">{galleryItems[currentImageIndex]?.alt}</p>
             </div>
           </div>
         </div>
