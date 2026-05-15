@@ -156,7 +156,7 @@ const projects: Project[] = [
 
 const buildWaLink = (projectName: string) => {
   const text = encodeURIComponent(`Hi MAHAVEER SALES CORPORATION,\n\nI'm interested in your ${projectName} project.\nPlease share more details and pricing.`);
-  return `https://api.whatsapp.com/send?phone=919967980747&text=${text}`;
+  return `https://api.whatsapp.com/send?phone=919987112822&text=${text}`;
 };
 
 export const Projects = () => {
@@ -271,7 +271,7 @@ export const Projects = () => {
                   <MessageCircle className="w-4 h-4" /> Enquire on WhatsApp
                 </a>
                 <a
-                  href="tel:+919967980747"
+                  href="tel:+919987112822"
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-foreground font-medium hover:bg-secondary transition"
                 >
                   <Phone className="w-4 h-4" /> Call us

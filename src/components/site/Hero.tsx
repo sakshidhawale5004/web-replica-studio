@@ -48,11 +48,11 @@ export const Hero = () => {
             <a href="#contact" className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-white font-medium shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-glow)] hover:-translate-y-0.5 transition-all duration-300" style={{ background: "var(--gradient-warm)" }}>
               Get a Free Quote <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="https://api.whatsapp.com/send?phone=919967980747&text=Hi%2C%20MAHAVEER%20SALES%20CORPORATION" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] text-white font-medium hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300">
+            <a href="https://api.whatsapp.com/send?phone=919987112822&text=Hi%2C%20MAHAVEER%20SALES%20CORPORATION" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] text-white font-medium hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300">
               <MessageCircle className="w-4 h-4" /> WhatsApp
             </a>
-            <a href="tel:+919967980747" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-300">
-              <Phone className="w-4 h-4" /> +91 99679 80747
+            <a href="tel:+919987112822" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/40 text-white hover:bg-white/10 backdrop-blur-sm hover:-translate-y-0.5 transition-all duration-300">
+              <Phone className="w-4 h-4" /> +91 99871 12822
             </a>
           </div>
 

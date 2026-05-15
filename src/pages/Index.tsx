@@ -37,7 +37,7 @@ const Index = () => {
       <Footer />
 
       <a
-        href="https://api.whatsapp.com/send?phone=919967980747&text=Hi%2C%20MAHAVEER%20SALES%20CORPORATION"
+        href="https://api.whatsapp.com/send?phone=919987112822&text=Hi%2C%20MAHAVEER%20SALES%20CORPORATION"
         target="_blank"
         rel="noreferrer"
         aria-label="Chat with us on WhatsApp"

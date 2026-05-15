@@ -8,7 +8,7 @@ export const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hi MAHAVEER SALES CORPORATION,%0A%0AName: ${form.name}%0APhone: ${form.phone}%0AEmail: ${form.email}%0AInterested in: ${form.interest}%0A%0A${form.message}`;
-    window.open(`https://api.whatsapp.com/send?phone=919967980747&text=${text}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=919987112822&text=${text}`, "_blank");
   };
 
   return (
@@ -23,7 +23,7 @@ export const Contact = () => {
         <div className="mt-16 grid lg:grid-cols-2 gap-10">
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3 mb-4">
-              <a href="https://api.whatsapp.com/send?phone=919967980747" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-medium hover:brightness-110 transition">
+              <a href="https://api.whatsapp.com/send?phone=919987112822" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-medium hover:brightness-110 transition">
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
               <a href="https://www.google.com/maps/place/India+Post/@19.2035025,72.8478996,17z" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-foreground font-medium hover:bg-secondary transition">
@@ -33,7 +33,7 @@ export const Contact = () => {
 
             {[
               { icon: MapPin, t: "Visit us", d: "5/A Silver Apartment, 1st Akurli Cross Road, Kandivali East, Mumbai 400101", href: "https://www.google.com/maps/place/India+Post/@19.2035025,72.8478996,17z" },
-              { icon: Phone, t: "Devesh Gupta · Proprietor", d: "+91 99679 80747 · +91 99871 12822", href: "tel:+919967980747" },
+              { icon: Phone, t: "Devesh Gupta · Proprietor", d: "+91 99871 12822", href: "tel:+919987112822" },
               { icon: Mail, t: "Email us", d: "mahaveersales2006@gmail.com", href: "mailto:mahaveersales2006@gmail.com" },
               { icon: Clock, t: "Hours", d: "Mon – Sat · 10:00 AM – 8:00 PM" },
             ].map(({ icon: Icon, t, d, href }) => {
