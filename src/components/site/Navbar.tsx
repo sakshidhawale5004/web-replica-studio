@@ -29,7 +29,7 @@ export const Navbar = () => (
         ))}
       </nav>
       <div className="flex items-center gap-3">
-        <a href="tel:+919967980747" className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent">
+        <a href="tel:+919967980747" className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent" title="Call us: +91 99679 80747 or 70392 57036">
           <Phone className="w-4 h-4" /> +91 99679 80747
         </a>
         <ThemeToggle />

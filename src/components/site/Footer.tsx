@@ -33,6 +33,7 @@ export const Footer = () => (
         <ul className="space-y-2 text-sm text-white/85">
           <li>5/A Silver Apartment, 1st Akurli Cross Road, Kandivali East, Mumbai 400101</li>
           <li><a href="tel:+919967980747" className="hover:text-accent">+91 99679 80747</a></li>
+          <li><a href="tel:+917039257036" className="hover:text-accent">70392 57036</a></li>
           <li><a href="mailto:mahaveersales2006@gmail.com" className="hover:text-accent">mahaveersales2006@gmail.com</a></li>
         </ul>
       </div>

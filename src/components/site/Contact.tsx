@@ -33,7 +33,7 @@ export const Contact = () => {
 
             {[
               { icon: MapPin, t: "Visit us", d: "5/A Silver Apartment, 1st Akurli Cross Road, Kandivali East, Mumbai 400101", href: "https://www.google.com/maps/place/India+Post/@19.2035025,72.8478996,17z" },
-              { icon: Phone, t: "Devesh Gupta · Proprietor", d: "+91 99679 80747", href: "tel:+919967980747" },
+              { icon: Phone, t: "Devesh Gupta · Proprietor", d: "+91 99679 80747 / 70392 57036", href: "tel:+919967980747" },
               { icon: Mail, t: "Email us", d: "mahaveersales2006@gmail.com", href: "mailto:mahaveersales2006@gmail.com" },
               { icon: Clock, t: "Hours", d: "Mon – Sat · 10:00 AM – 8:00 PM" },
             ].map(({ icon: Icon, t, d, href }) => {
