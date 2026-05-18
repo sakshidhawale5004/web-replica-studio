@@ -1,5 +1,6 @@
-import { Phone } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { useState } from "react";
 
 const links = [
   { label: "About", href: "#about" },
@@ -11,32 +12,79 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-export const Navbar = () => (
-  <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
-    <div className="container-wide flex items-center justify-between h-20">
-      <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-        <img src="/msc-logo.jpg" alt="MSC Creative logo" className="w-20 h-14 object-contain" width={80} height={56} loading="eager" />
-        <div className="leading-tight hidden sm:block">
-          <p className="font-display text-sm font-semibold">Mahaveer Sales</p>
-          <p className="text-[9px] tracking-[0.15em] uppercase text-muted-foreground font-medium">Corporation · Est. 2006</p>
-        </div>
-      </a>
-      <nav className="hidden lg:flex items-center gap-8">
-        {links.map((l) => (
-          <a key={l.href} href={l.href} className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors">
-            {l.label}
+export const Navbar = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <>
+      <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/60">
+        <div className="container-wide flex items-center justify-between h-20">
+          <a href="#" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img src="/msc-logo.jpg" alt="MSC Creative logo" className="w-20 h-14 object-contain" width={80} height={56} loading="eager" />
+            <div className="leading-tight hidden sm:block">
+              <p className="font-display text-sm font-semibold">Mahaveer Sales</p>
+              <p className="text-[9px] tracking-[0.15em] uppercase text-muted-foreground font-medium">Corporation · Est. 2006</p>
+            </div>
           </a>
-        ))}
-      </nav>
-      <div className="flex items-center gap-3">
-        <a href="tel:+919967980747" className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent" title="Call us: +91 99679 80747">
-          <Phone className="w-4 h-4" /> +91 99679 80747
-        </a>
-        <ThemeToggle />
-        <a href="#contact" className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
-          Get a Quote
-        </a>
-      </div>
-    </div>
-  </header>
-);
+          <nav className="hidden lg:flex items-center gap-8">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors">
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <div className="flex items-center gap-3">
+            <a href="tel:+919967980747" className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-accent" title="Call us: +91 99679 80747">
+              <Phone className="w-4 h-4" /> +91 99679 80747
+            </a>
+            <ThemeToggle />
+            <a href="#contact" className="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
+              Get a Quote
+            </a>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-accent hover:bg-secondary transition-colors"
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 lg:hidden">
+          <div className="fixed inset-0 bg-background/95 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
+          <nav className="fixed top-20 inset-x-0 bottom-0 bg-background border-t border-border overflow-y-auto">
+            <div className="container-wide py-6 space-y-1">
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3 text-base font-medium text-foreground hover:text-accent hover:bg-secondary rounded-lg transition-colors"
+                >
+                  {l.label}
+                </a>
+              ))}
+              <a
+                href="tel:+919967980747"
+                className="flex items-center gap-2 px-4 py-3 text-base font-medium text-foreground hover:text-accent hover:bg-secondary rounded-lg transition-colors"
+              >
+                <Phone className="w-5 h-5" /> +91 99679 80747
+              </a>
+              <a
+                href="#contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block mx-4 mt-4 px-5 py-3 text-center rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+              >
+                Get a Quote
+              </a>
+            </div>
+          </nav>
+        </div>
+      )}
+    </>
+  );
+};
