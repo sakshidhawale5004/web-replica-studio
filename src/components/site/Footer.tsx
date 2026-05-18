@@ -16,7 +16,6 @@ export const Footer = () => (
       </div>
       <div>
         <div className="flex items-center gap-2 mb-4">
-          <img src="/msc-logo.jpg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
           <p className="text-xs uppercase tracking-[0.2em] text-white/60">Explore</p>
         </div>
         <ul className="space-y-2 text-sm">
@@ -27,7 +26,6 @@ export const Footer = () => (
       </div>
       <div>
         <div className="flex items-center gap-2 mb-4">
-          <img src="/msc-logo.jpg" alt="MSC Creative" className="w-8 h-6 object-contain" width={32} height={24} />
           <p className="text-xs uppercase tracking-[0.2em] text-white/60">Get in touch</p>
         </div>
         <ul className="space-y-2 text-sm text-white/85">
@@ -39,10 +37,7 @@ export const Footer = () => (
     </div>
     <div className="border-t border-white/10">
       <div className="container-wide py-6 text-xs text-white/60 flex flex-col md:flex-row justify-between items-center gap-2">
-        <div className="flex items-center gap-2">
-          <img src="/msc-logo.jpg" alt="MSC Creative" className="w-6 h-4 object-contain" width={24} height={16} />
-          <p>© {new Date().getFullYear()} Mahaveer Sales Corporation. All rights reserved.</p>
-        </div>
+        <p>© {new Date().getFullYear()} Mahaveer Sales Corporation. All rights reserved.</p>
         <p>Crafted with care in Mumbai.</p>
       </div>
     </div>
