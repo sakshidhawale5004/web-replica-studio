@@ -26,14 +26,14 @@ export const Contact = () => {
               <a href="https://api.whatsapp.com/send?phone=919967980747" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#25D366] text-white font-medium hover:brightness-110 transition">
                 <MessageCircle className="w-4 h-4" /> Chat on WhatsApp
               </a>
-              <a href="https://www.google.com/maps/place/India+Post/@19.2035025,72.8478996,17z" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-foreground font-medium hover:bg-secondary transition">
+              <a href="https://www.google.com/maps/search/?api=1&query=5%2FA+Silver+Apartment%2C+1st+Akurli+Cross+Road%2C+Kandivali+East%2C+Mumbai+400101" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-border bg-card text-foreground font-medium hover:bg-secondary transition">
                 <Navigation className="w-4 h-4" /> Get Directions
               </a>
             </div>
 
             {[
-              { icon: MapPin, t: "Visit us", d: "5/A Silver Apartment, 1st Akurli Cross Road, Kandivali East, Mumbai 400101", href: "https://www.google.com/maps/place/India+Post/@19.2035025,72.8478996,17z" },
-              { icon: Phone, t: "Devesh Gupta · Proprietor", d: "+91 99679 80747 / 70392 57036", href: "tel:+919967980747" },
+              { icon: MapPin, t: "Visit us", d: "5/A Silver Apartment, 1st Akurli Cross Road, Kandivali East, Mumbai 400101", href: "https://www.google.com/maps/search/?api=1&query=5%2FA+Silver+Apartment%2C+1st+Akurli+Cross+Road%2C+Kandivali+East%2C+Mumbai+400101" },
+              { icon: Phone, t: "Devesh Gupta · Proprietor", d: "+91 99679 80747", href: "tel:+919967980747" },
               { icon: Mail, t: "Email us", d: "mahaveersales2006@gmail.com", href: "mailto:mahaveersales2006@gmail.com" },
               { icon: Clock, t: "Hours", d: "Mon – Sat · 10:00 AM – 8:00 PM" },
             ].map(({ icon: Icon, t, d, href }) => {
